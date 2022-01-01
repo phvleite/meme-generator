@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Meme Generator</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Meme Generator</h1>
+    </header>
+    <main>
+        <section id="options">
+            <div id="inserir-texto">
+                Texto: 
+                <input type="text" id="text-input" maxlength="60">
+            </div>
+            <div id="inserir-imagem">
+                <label for="meme-insert">Imagem:</label>
+                <input type="file" id="meme-insert" name="meme-insert" accept="image/png, image/jpeg">
+            </div>
+            <div id="bt-options">
+                <button id="fire"><ion-icon name="flame-outline" id="icon-fire"></ion-icon><br>Fire</button>
+                <button id="water"><ion-icon name="water-outline" id="icon-water"></ion-icon><br>Water</button>
+                <button id="earth"><ion-icon name="earth-outline" id="icon-earth"></ion-icon><br>Earth</button>
+                <button id="reset"><ion-icon name="refresh-circle-outline" id="icon-reset"></ion-icon><br>Limpar</button>
+            </div>
+            <div id="memes-prontas">
+                <img class="memes-img" id="meme-1" src="images/meme001.png"></img>
+                <img class="memes-img" id="meme-2" src="images/meme002.png"></img>
+                <img class="memes-img" id="meme-3" src="images/meme005.png"></img>
+                <img class="memes-img" id="meme-4" src="images/meme006.png"></img>
+            </div>
+        </section>
+        <section id="result">
+            <div id="meme-image-container">
+                <div id="meme-text"></div>
+                <img id="meme-image"></img>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
