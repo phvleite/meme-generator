@@ -1,6 +1,8 @@
+// constantes da id principais
 const memeImage = 'meme-image';
 const memeImageContainer = 'meme-image-container';
 
+// inserir o texto sobre a imagem
 function insereMemeText() {
   const memeText = document.getElementById('text-input');
   document.getElementById('meme-text').innerText = memeText.value;
@@ -9,9 +11,10 @@ function insereMemeText() {
 const textoMeme = document.getElementById('text-input');
 textoMeme.addEventListener('keyup', insereMemeText);
 
+// Insere imagens pré-definidas
 function insereImgMeme(evento) {
   const srcMeme = evento.target.src;
-  document.getElementById(memeImage).src = srcMeme;
+  document.getElementById(memeImage).setAttribute('src', `${srcMeme}`);
 }
 
 const imgMemes = document.querySelectorAll('img');
