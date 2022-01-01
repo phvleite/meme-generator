@@ -130,13 +130,13 @@ ion-icon
 }
 #meme-image-container.water
 {
-    border: double 10px aqua;
+    border: double 5px rgb(0,0,255);
     background-color: white;
     box-shadow: gray 2px 10px 20px 5px;
 }
 #meme-image-container.earth
 {
-    border: dotted 10px mediumblue;
+    border: dotted 6px rgb(0,128,0);
     background-color: white;
     box-shadow: gray 2px 10px 20px 5px;
 }

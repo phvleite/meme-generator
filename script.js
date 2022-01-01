@@ -28,9 +28,9 @@ memeInsert.onchange = function mInsert() {
   arqUser.readAsDataURL(this.files[0]);
 };
 
-function estilizaBorda(evento) {
-  const borda = evento.target.id;
+function estilizaBorda(borda) {
   const remClasse = document.getElementById(memeImageContainer).className;
+  document.getElementById(memeImageContainer).removeAttribute('class', remClasse);
   console.log(borda);
   switch (borda) {
   case 'fire':
@@ -43,19 +43,28 @@ function estilizaBorda(evento) {
     document.getElementById(memeImageContainer).setAttribute('class', 'earth');
     break;
   default:
-    document.getElementById(memeImageContainer).removeAttribute('class', remClasse);
-    break;
   }
 }
 
+function defElemento(evento) {
+  const ele = evento.target.id;
+  console.log(ele.slice(0, 5));
+  console.log(ele.slice(5, ele.lenght));
+  if (ele.slice(0, 5) === 'icon-') {
+    estilizaBorda(ele.slice(5, ele.lenght));
+    return;
+  }
+  estilizaBorda(ele);
+}
+
 const btFire = document.getElementById('fire');
-btFire.addEventListener('click', estilizaBorda);
+btFire.addEventListener('click', defElemento);
 
 const btWater = document.getElementById('water');
-btWater.addEventListener('click', estilizaBorda);
+btWater.addEventListener('click', defElemento);
 
 const btEarth = document.getElementById('earth');
-btEarth.addEventListener('click', estilizaBorda);
+btEarth.addEventListener('click', defElemento);
 
 const btReset = document.getElementById('reset');
-btReset.addEventListener('click', estilizaBorda);
+btReset.addEventListener('click', defElemento);
